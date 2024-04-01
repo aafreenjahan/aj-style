@@ -1,0 +1,538 @@
+Login.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class="login-container">
+    <h1>Discover your Style with AJ STYLES!</h1>
+    <form action="#" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <a href="Front page.html" class="button">Login</a>
+    </form>
+</div>
+</body>
+</html>
+
+
+
+
+
+login.css
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+Front page.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        h1, h3, h5 {
+            font-size: 36px;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+            color: #410749;
+        }
+        h2, h4, h6 {
+            font-size: 24px;
+            font-weight: bold;
+            font-style: oblique;
+            text-decoration: unset;
+            color: #0099cc;
+        }
+        .advertising {
+            font-size: 24px;
+            color: #170970;
+            margin-top: 50px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #008CBA;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to AJ Styles</h1>
+    <h2>Your One-Stop Destination for fashion</h2>
+    <p>Explore our wide range of products that will make your life easier and more enjoyable.</p>
+    <h3>Explore! & Discover!</h3>
+    <p>Don't miss out on our exclusive deals and discounts. Grab them now!</p>
+    <div class="advertising">
+        <p>Special Offers Await!</p>
+    </div>
+    <a href="home page.html" class="button">Home</a>
+    <a href="About Us.html" class="button">About Us</a>
+    <a href="Contact.html" class="button">Contact</a>
+    <a href="Feedback.html" class="button">Feedback</a>
+</body>
+</html>
+
+
+
+
+
+home page.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <h1>Have a look at these Amazing Attires!</h1>
+    <style>
+        .box {
+            width: 200px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+        }
+        
+        .img-box {
+            text-align: center;
+        }
+        
+        .images {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .bottom {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #008CBA;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #005f7f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="root"></div>
+        <div class="sidebar"></div>
+        <div class="head"><p>My Cart</div>
+        <div id="cartItem">(Your Cart is empty)</div>
+        <div class="foot">
+            <h3>Total</h3>
+            <h2 id="total">$0.00</h2>
+        </div>
+        <a href="Feedback.html" class="button">Payment</a>
+        <a href="Front page.html" class="button">Back</a>
+    </div>
+    <script src="home page script.js"></script>
+</body>
+</html>
+
+
+
+
+
+home page script.js
+const product = [
+    {
+        id: 1,
+        image: 'item1.jpg',
+        title: 'T-Shirt',
+        price: 49.99,
+    },
+    {
+        id: 2,
+        image: 'item2.jpg',
+        title: 'Pant',
+        price: 39.99,
+    },
+    {
+        id: 3,
+        image: 'item3.jpg',
+        title: 'Shirt',
+        price: 59.99,
+    },
+    {
+        id: 4,
+        image: 'item4.jpg',
+        title: 'Frock',
+        price: 49.99,
+    },
+    {
+        id: 5,
+        image: 'item5.jpg',
+        title: 'Gloves',
+        price: 3.99,
+    },
+    {
+        id: 6,
+        image: 'item6.jpg',
+        title: 'Abaya',
+        price: 69.99,
+    },
+    {
+        id: 7,
+        image: 'item7.jpg',
+        title: 'Kurthi',
+        price: 49.99,
+    },
+    {
+        id: 8,
+        image: 'item8.jpg',
+        title: 'Lehenga',
+        price: 99.99,
+    },
+    {
+        id: 9,
+        image: 'item9.jpg',
+        title: 'Socks',
+        price: 4.99,
+    },
+];
+
+const categories = [...new Set(product.map((item) => 
+{return item}))];
+let i = 0;
+document.getElementById('root').innerHTML = categories.map((item)=> 
+{
+var { image, title, price } = item;
+return (
+    `<div class='box'>
+        <div class='img-box'>
+            <img class='images' src=${image}></img>
+        </div>
+    <div class='bottom'>
+    <p>${title}</p>
+    <h2>$ ${price}</h2>`+
+    "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
+     `</div>
+    </div>`
+);
+})
+.join('');
+
+var cart = [];
+
+function addtocart(a){
+cart.push({...categories[a]});
+displaycart();
+}
+function addtocart(a){
+cart.push({...categories[a]});
+displaycart();
+}
+function delElement(a){
+cart.splice(a, 1);
+displaycart()
+}
+
+function displaycart(a) {
+let j = 0; total=0;
+if (cart.length == 0) {
+document.getElementById('cartItem').innerHTML = "Your Cart is empty";
+document.getElementById("total").innerHTML = "$ "+0+"";
+} else {
+document.getElementById("cartItem").innerHTML = cart.map((item) => 
+{
+    var { image, title, price } = item;
+    total=total+price;
+    document.getElementById("total").innerHTML = "$ "+total+"";
+    return (
+        `<div class='cart-item'>
+            <div class='row-img'>
+                <img class='rowing' src=${image}>
+            </div>
+            <p style='font-size:12px;'>${title}</p>
+            <h2 style='font-size: 15px;'>$ ${price}</h2>`+
+            "<button class='delete-btn' onclick='delElement("+ (j++) +")'>Delete</button></div>"
+    );
+}).join('');
+}
+}
+
+
+
+
+About Us.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to AJ Styles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: bold;
+            color: #a13569;
+        }
+        p {
+            font-style: italic;
+            font-weight: bold;
+            color: #4b0082;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(123, 57, 133, 0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #be7c95;
+            color: #fff;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to AJ Styles!</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>About Us</h2>
+            <p>At AJ Styles, we're passionate about delivering unique and stylish products to our customers. 
+                With a focus on creativity and innovation, we strive to provide an exceptional shopping experience that inspires and delights.</p>
+        </section>
+        <section>
+            <h3>Our Mission</h3>
+            <p>Our mission is to empower individuals to express themselves through fashion by offering a diverse range of high-quality and trend-setting products. 
+                We believe that everyone deserves to feel confident and fabulous in what they wear, and we're here to make that possible.</p>
+        </section>
+        <section>
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li>Unique and stylish products</li>
+                <li>Exceptional customer service</li>
+                <li>Fast and reliable shipping</li>
+                <li>Commitment to quality</li>
+                <li>Inspiring shopping experience</li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <h4>Thank You for visiting us!</h4>
+        <button onclick="window.location.href='front page.html'" style="display: block; margin: 0 auto;">Back</button>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+Contact.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            color: #a04e77;
+        }
+        p {
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <p>For any inquiries, please contact us at:</p>
+    <p>Email: info@ajstyles.com</p>
+    <p>Phone: 123-456-7890</p>
+    <p>Address: No.25, abc colony, xxx:07</p>
+    <button onclick="window.location.href='front page.html'" style="display: block; margin: 0 auto;">Back</button>
+</body>
+</html>
+
+
+
+
+
+Feedback.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: bold;
+            color: #800080;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #800080;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback</h1>
+        <p>Please provide your valuable feedback below:</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <button onclick="window.location.href='front page.html'" style="display: block; margin: 0 auto;">Back</button>
+</body>
+</html>
